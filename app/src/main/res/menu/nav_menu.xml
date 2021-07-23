@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menu_profile"
+        android:title="Cerca"
+        android:icon="@drawable/ic_baseline_person_24"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/menu_new_message"
+        android:icon="@drawable/ic_baseline_group_add_24"
+        android:title="Nuovo messaggio"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/menu_sign_out"
+        android:icon="@drawable/ic_baseline_login_24"
+        android:title="Esci"
+        app:showAsAction="ifRoom" />
+
+
+</menu>

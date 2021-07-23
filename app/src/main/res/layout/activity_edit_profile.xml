@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfile">
+
+    <EditText
+        android:id="@+id/username_edit"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/custom_user_icon"
+        android:drawableLeft="@drawable/custom_user_icon"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingLeft="20dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/email_edit"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/custom_email_icon"
+        android:drawableLeft="@drawable/custom_email_icon"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="12dp"
+        android:paddingLeft="15dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/username_edit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/username_edit"
+        app:layout_constraintTop_toBottomOf="@+id/username_edit" />
+
+    <EditText
+        android:id="@+id/password_edit"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/custom_lock_icon"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingStart="12dp"
+        android:paddingLeft="15dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/email_edit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/email_edit"
+        app:layout_constraintTop_toBottomOf="@+id/email_edit" />
+
+
+    <EditText
+        android:id="@+id/password_edit_new"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/custom_lock_icon"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="Nuova password"
+        android:inputType="textPassword"
+        android:paddingStart="12dp"
+        android:paddingLeft="15dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/password_edit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/password_edit"
+        app:layout_constraintTop_toBottomOf="@+id/password_edit" />
+
+    <EditText
+        android:id="@+id/password_edit_new2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/custom_lock_icon"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="Conferma nuova password"
+        android:inputType="textPassword"
+        android:paddingStart="12dp"
+        android:paddingLeft="15dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/password_edit_new"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/password_edit_new"
+        app:layout_constraintTop_toBottomOf="@+id/password_edit_new" />
+
+
+    <Button
+        android:id="@+id/button_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Modifica"
+        app:layout_constraintEnd_toEndOf="@+id/password_edit_new2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/password_edit_new2"
+        app:layout_constraintTop_toBottomOf="@+id/password_edit_new2" />
+
+    <Button
+        android:id="@+id/photo_button_edit"
+        android:layout_width="125dp"
+        android:layout_height="129dp"
+        android:background="@drawable/photo_button"
+        android:text="Scegli una foto"
+        app:layout_constraintBottom_toTopOf="@+id/username_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userphoto_view_edit"
+        app:civ_border_color="@color/head"
+        app:civ_border_width="4dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        app:layout_constraintBottom_toBottomOf="@+id/photo_button_edit"
+        app:layout_constraintEnd_toEndOf="@+id/photo_button_edit"
+        app:layout_constraintStart_toStartOf="@+id/photo_button_edit"
+        app:layout_constraintTop_toTopOf="@+id/photo_button_edit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

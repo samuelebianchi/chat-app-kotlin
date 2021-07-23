@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chat">
+
+    <uses-permission android:name="android.Manifest.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Chat">
+        <activity android:name=".EditProfile">
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".ChatListActivity" />
+        </activity>
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ChatActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ChatListActivity" />
+        </activity>
+        <activity android:name=".NewMessageActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ChatListActivity" />
+        </activity>
+        <activity android:name=".ChatListActivity" />
+        <activity
+            android:name=".SigninActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/login_activity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
